@@ -2,15 +2,15 @@
 <html lang="es" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Carlos Alfaro | Ciberseguridad & Desarrollo Seguro</title>
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carlos Alfaro | Ciberseguridad y Desarrollo</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -21,151 +21,94 @@
       background-color: #0f172a;
       color: #e2e8f0;
     }
-
-    .accent {
-      color: #22c55e;
-    }
-
-    .nav-link {
-      @apply px-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-slate-800 hover:text-white;
-    }
-
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(to right, #0f172a, #1e293b);
-      z-index: -2;
-    }
-
-    #hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(15, 23, 42, 0.7);
-      z-index: -1;
-    }
-
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #1e293b;
-      border-radius: 4px;
+    .accent-color {
+      color: #10b981;
     }
   </style>
 </head>
 
 <body class="antialiased">
-  <header class="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-md border-b border-slate-800">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-      <a href="#" class="text-xl font-bold text-white">Carlos Alfaro</a>
-      <nav class="hidden md:flex items-center space-x-4">
-        <a href="#about" class="nav-link">Sobre mí</a>
-        <a href="#skills" class="nav-link">Habilidades</a>
-        <a href="#projects" class="nav-link">Proyectos</a>
-        <a href="#contact" class="nav-link bg-emerald-600 text-white hover:bg-emerald-500">Contacto</a>
+  <header class="fixed w-full z-50 bg-black/50 backdrop-blur-lg border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-white">Carlos Alfaro</h1>
+      <nav class="space-x-4 hidden md:block">
+        <a href="#sobre-mi" class="text-gray-300 hover:text-white">Sobre mí</a>
+        <a href="#certificaciones" class="text-gray-300 hover:text-white">Certificaciones</a>
+        <a href="#contacto" class="text-gray-300 hover:text-white">Contacto</a>
       </nav>
-      <button id="mobile-menu-button" class="md:hidden text-white">
-        <i class="fas fa-bars fa-lg"></i>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-slate-900">
-      <a href="#about" class="block py-2 px-4 text-sm hover:bg-slate-800">Sobre mí</a>
-      <a href="#skills" class="block py-2 px-4 text-sm hover:bg-slate-800">Habilidades</a>
-      <a href="#projects" class="block py-2 px-4 text-sm hover:bg-slate-800">Proyectos</a>
-      <a href="#contact" class="block py-2 px-4 text-sm hover:bg-slate-800">Contacto</a>
     </div>
   </header>
 
-  <main class="pt-20">
-    <section id="hero" class="h-screen flex items-center justify-center relative text-center">
-      <div class="container mx-auto px-6">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-          Experto en <span class="accent">Ciberseguridad</span><br />y Desarrollo Seguro
-        </h1>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-          Con más de 25 años en desarrollo informático, y más de 5 años especializado en pruebas de penetración, análisis de vulnerabilidades, y DevSecOps.
-        </p>
-        <a href="#about" class="bg-emerald-600 text-white font-bold py-3 px-8 rounded-full hover:bg-emerald-500 transition-transform hover:scale-105">
-          Conocer más
-        </a>
+  <main class="pt-24">
+    <!-- HERO -->
+    <section id="hero" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-gray-900 to-gray-800">
+      <div class="max-w-4xl px-6">
+        <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-4">Especialista en <span class="accent-color">Ciberseguridad</span></h2>
+        <p class="text-gray-400 text-lg md:text-xl mb-6">Con más de 25 años de experiencia en desarrollo de software y 5 años enfocado en ciberseguridad ofensiva y defensiva.</p>
+        <a href="#certificaciones" class="bg-emerald-600 text-white font-semibold px-6 py-3 rounded hover:bg-emerald-500 transition">Ver certificaciones</a>
       </div>
     </section>
 
-    <section id="about" class="py-24 bg-slate-800/30">
-      <div class="container mx-auto px-6 max-w-4xl text-center">
-        <h2 class="text-3xl font-bold mb-6 text-white">Sobre Mí</h2>
-        <p class="text-lg text-gray-300 leading-relaxed">
-          Soy Carlos Alfaro, ingeniero informático y especialista en ciberseguridad. Me apasiona proteger la información, diseñar infraestructuras seguras, y desarrollar soluciones robustas para pequeñas y medianas empresas.
-        </p>
-        <p class="mt-6 text-gray-400">
-          He trabajado con tecnologías como <strong>PfSense, Suricata, Wazuh, TheHive, Cortex</strong> y más. También cuento con experiencia en infraestructura de red, servidores, y SOCs tanto open source como comerciales.
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="py-20 bg-gray-900">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-8">Sobre Mí</h2>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          Soy Carlos Alfaro, informático costarricense con una sólida base en desarrollo full-stack, redes y seguridad informática. Mi enfoque actual está en el desarrollo seguro de aplicaciones, análisis de vulnerabilidades, y pruebas de penetración.  
+          <br /><br />
+          He liderado la implementación de SOCs utilizando herramientas como Wazuh, Pfsense, Suricata, The Hive y Cortex. Además, cuento con múltiples certificaciones en ciberseguridad y metodologías ágiles.
         </p>
       </div>
     </section>
 
-    <section id="skills" class="py-24">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-3xl font-bold text-center mb-12 text-white">Habilidades Técnicas</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
-          <div class="bg-slate-900 p-6 rounded-xl">
-            <i class="fas fa-shield-alt fa-3x text-emerald-400"></i>
-            <p class="mt-4">Ciberseguridad</p>
+    <!-- CERTIFICACIONES -->
+    <section id="certificaciones" class="py-20 bg-gray-800/50">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-12">Certificaciones Destacadas</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <!-- CERT 1 -->
+          <div class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-emerald-500/20 transition">
+            <img src="https://images.credly.com/size/220x220/images/5c6a82c0-709b-41f3-9095-5c40d2a793ee/image.png" alt="Microsoft Cybersecurity Analyst" class="mx-auto mb-4 w-24 h-24">
+            <h3 class="text-xl font-semibold text-white mb-2">Microsoft Cybersecurity Analyst</h3>
+            <a href="https://www.credly.com/badges/b2b63144-4a76-46fa-a187-8c2a7b2898c2/public_url" target="_blank" class="text-emerald-400 hover:underline">Ver credencial</a>
           </div>
-          <div class="bg-slate-900 p-6 rounded-xl">
-            <i class="fas fa-code fa-3x text-cyan-400"></i>
-            <p class="mt-4">Python & Flask</p>
+
+          <!-- CERT 2 -->
+          <div class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-emerald-500/20 transition">
+            <img src="https://images.credly.com/size/220x220/images/1b29274f-b817-469b-89d0-8997eefb54d5/image.png" alt="Cyber Threat Management" class="mx-auto mb-4 w-24 h-24">
+            <h3 class="text-xl font-semibold text-white mb-2">Cyber Threat Management</h3>
+            <a href="https://www.credly.com/badges/fbce8ab4-8e6b-4717-9889-68b160f4a5eb/public_url" target="_blank" class="text-emerald-400 hover:underline">Ver credencial</a>
           </div>
-          <div class="bg-slate-900 p-6 rounded-xl">
-            <i class="fas fa-network-wired fa-3x text-yellow-400"></i>
-            <p class="mt-4">Infraestructura de Red</p>
+
+          <!-- CERT 3 -->
+          <div class="bg-gray-900 p-6 rounded-lg shadow hover:shadow-emerald-500/20 transition">
+            <img src="https://images.credly.com/size/220x220/images/fd172c52-2e70-4a84-89a5-122e7b645fca/image.png" alt="Microsoft Security Compliance and Identity Fundamentals" class="mx-auto mb-4 w-24 h-24">
+            <h3 class="text-xl font-semibold text-white mb-2">Security, Compliance & Identity</h3>
+            <a href="https://www.credly.com/badges/5b6115ef-6590-4f39-8b04-0b33cc0419ae/public_url" target="_blank" class="text-emerald-400 hover:underline">Ver credencial</a>
           </div>
-          <div class="bg-slate-900 p-6 rounded-xl">
-            <i class="fas fa-tools fa-3x text-orange-400"></i>
-            <p class="mt-4">Pentesting & SOC</p>
-          </div>
+        </div>
+
+        <div class="mt-12">
+          <a href="https://www.credly.com/users/carlos-alfaro.45d84cea/badges#credly" target="_blank" class="inline-block bg-emerald-600 text-white font-bold py-3 px-6 rounded-full hover:bg-emerald-500 transition">
+            Ver todas las certificaciones
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="projects" class="py-24 bg-slate-800/40">
-      <div class="container mx-auto px-6 max-w-5xl text-center">
-        <h2 class="text-3xl font-bold mb-6 text-white">Proyectos Destacados</h2>
-        <p class="text-gray-400 mb-8">Aquí puedes explorar algunos de mis proyectos personales y colaborativos.</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-slate-900 p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold text-white mb-2">HK Flask App</h3>
-            <p class="text-gray-400">Aplicación en Flask para manejo de apuntes y base de datos SQL. Enfoque en desarrollo seguro.</p>
-          </div>
-          <div class="bg-slate-900 p-6 rounded-lg text-left">
-            <h3 class="text-xl font-bold text-white mb-2">LIDEPO</h3>
-            <p class="text-gray-400">Sistema de control para puntos de venta y rastreo. Integra frontend, backend y control de acceso.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- CONTACTO -->
+    <footer id="contacto" class="py-16 bg-black text-center">
+      <h2 class="text-2xl font-bold text-white mb-4">Contacto</h2>
+      <p class="text-gray-400 mb-6">¿Preguntas o ideas de colaboración?</p>
+      <a href="mailto:carlos.alfaro1@gmail.com" class="inline-block bg-emerald-700 text-white px-6 py-3 rounded hover:bg-emerald-600 transition">Escríbeme</a>
 
-    <footer id="contact" class="py-16 bg-black text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">Contacto</h2>
-      <p class="text-gray-400 mb-6">¿Tenés un proyecto o idea que quieras discutir? ¡Escribime!</p>
-      <a href="mailto:carlos.alfaro1@gmail.com" class="inline-block bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-6 rounded-full">
-        <i class="fas fa-envelope mr-2"></i> Enviar correo
-      </a>
       <div class="flex justify-center space-x-6 mt-8">
         <a href="https://github.com/carlosalf27" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github fa-2x"></i></a>
         <a href="https://www.linkedin.com/in/carlos-alfaro-15ab18195/" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin fa-2x"></i></a>
-        <a href="https://www.credly.com/users/carlos-alfaro.45d84cea/badges#credly" target="_blank" class="text-gray-400 hover:text-white"><i class="fas fa-award fa-2x"></i></a>
+        <a href="https://www.credly.com/users/carlos-alfaro.45d84cea/badges#credly" target="_blank" class="text-gray-400 hover:text-white"><i class="fas fa-certificate fa-2x"></i></a>
       </div>
     </footer>
   </main>
-
-  <script>
-    const btn = document.getElementById('mobile-menu-button');
-    const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>
