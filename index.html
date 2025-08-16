@@ -136,15 +136,19 @@
           <a href="#" class="text-emerald-400 hover:underline">Ver detalles</a>
         </div>
   
-        <!-- Proyecto con video -->
+        <!-- Proyecto con video local -->
         <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-emerald-500/20 transition">
           <div class="aspect-video mb-4 rounded overflow-hidden">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen class="w-full h-full"></iframe>
+            <video controls class="w-full h-full rounded">
+              <source src="Sistema.mp4" type="video/mp4">
+              Tu navegador no soporta la reproducción de video.
+            </video>
           </div>
           <h3 class="text-xl font-semibold text-white mb-2">Demo: App CRUD en Flask</h3>
           <p class="text-gray-400 mb-4">CRUD completo protegido con autenticación, validaciones en formularios y manejo de sesiones.</p>
           <a href="#" class="text-emerald-400 hover:underline">Ver código en GitHub</a>
         </div>
+
       </div>
     </div>
   </section>
@@ -164,6 +168,7 @@
   </main>
 </body>
 </html>
+
 
 
 
